@@ -72,9 +72,7 @@ if(mysqli_num_rows($result)>0){
       <th scope="col">Publisher_Name</th>
       <th scope="col">Publisher_Address</th>
       <th scope="col">Publish_Date</th>
-      <td><a href='delete.php?id={$row["id"]}'>Delete</a></td>
-        <td><a href='details.php?id={$row["id"]}'>Details</a></td>
-        <td><a href='update.php?id={$row["id"]}'>Update</a></td>
+      
     </tr>
   </thead>
   <tbody>
