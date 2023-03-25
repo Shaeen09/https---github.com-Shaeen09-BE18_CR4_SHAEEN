@@ -1,0 +1,10 @@
+#main_heading {
+    text-align: center;
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
