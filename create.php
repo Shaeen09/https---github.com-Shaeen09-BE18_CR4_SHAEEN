@@ -3,18 +3,18 @@
     if(isset($_POST["submit"])){
    
 
-    $title =$_POST["name"];
+    $title =$_POST["title"];
     $image =$_POST["image"];
     $ISBNcode =$_POST["number"];
-    $description =$_POST["name"];
-    $type =$_POST["name"];
-    $Author_first_Name =$_POST["name"];
-    $Author_last_Name =$_POST["name"];
-    $Publisher_Name =$_POST["name"];
-    $Publisher_Address =$_POST["name"];
+    $description =$_POST["text"];
+    $type =$_POST["type"];
+    $Author_first_Name =$_POST["fname"];
+    $Author_last_Name =$_POST["lname"];
+    $Publisher_Name =$_POST["pname"];
+    $Publisher_Address =$_POST["padd"];
     $Publish_date =$_POST["date"];
 
-    $sql = "INSERT INTO biglibrary (`$title`,`$image`, `$ISBNcode`, `$description`, `$type` ,`$Author_first_Name` ,`$Author_last_Name` ,`$Publisher_Name` ,`$Publisher_Address` ,`$Publish_date`) ";
+    $sql = "INSERT INTO `biglibrary`( `Title`, `image`, `ISBNcode`, `Description`, `Type`, `Author_first_Name`, `Author_last_Name`, `Publisher_Name`, `Publisher_Address`, `Publish_Date`) VALUES ('$title',' $image',' $ISBNcode','$description','$type','$Author_first_Name','$Author_last_Name',' $Publisher_Name','$Publisher_Address','$Publish_date ') ";
 
     if(mysqli_query($connect, $sql)){
         header("Location:index.php");
@@ -35,15 +35,15 @@
 
 <body>
     <form method="POST">
-        <input type="text" placeholder="Please enter the title" name="name"><br>
+        <input type="text" placeholder="Please enter the title" name="title"><br>
         <input type="text" placeholder="Please enter the image" name="image"><br>
         <input type="text" placeholder="Please enter the ISBNcode" name="number"><br>
-        <input type="text" placeholder="Please enter the description" name="name"><br>
-        <input type="text" placeholder="Please enter the type" name="name"><br>
-        <input type="text" placeholder="Please enter the Author_first_Name" name="name"><br>
-        <input type="text" placeholder="Please enter the Author_last_Name" name="name"><br>
-        <input type="text" placeholder="Please enter the Publisher_Name" name="name"><br>
-        <input type="text" placeholder="Please enter the Publisher_Address" name="name"><br>
+        <input type="text" placeholder="Please enter the description" name="text"><br>
+        <input type="text" placeholder="Please enter the type" name="type"><br>
+        <input type="text" placeholder="Please enter the Author_first_Name" name="fname"><br>
+        <input type="text" placeholder="Please enter the Author_last_Name" name="lname"><br>
+        <input type="text" placeholder="Please enter the Publisher_Name" name="pname"><br>
+        <input type="text" placeholder="Please enter the Publisher_Address" name="padd"><br>
         <input type="text" placeholder="Please enter the Publish_Date" name="date"><br>
         <input type="submit" name="submit" value="create entry">
         
