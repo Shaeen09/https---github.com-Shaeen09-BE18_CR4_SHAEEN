@@ -34,20 +34,46 @@
 </head>
 
 <body>
-    <form method="POST">
-        <input type="text" placeholder="Please enter the title" name="title"><br>
-        <input type="text" placeholder="Please enter the image" name="image"><br>
-        <input type="text" placeholder="Please enter the ISBNcode" name="number"><br>
-        <input type="text" placeholder="Please enter the description" name="description"><br>
-        <input type="text" placeholder="Please enter the type" name="type"><br>
-        <input type="text" placeholder="Please enter the Author_first_Name" name="fname"><br>
-        <input type="text" placeholder="Please enter the Author_last_Name" name="lname"><br>
-        <input type="text" placeholder="Please enter the Publisher_Name" name="pname"><br>
-        <input type="text" placeholder="Please enter the Publisher_Address" name="padd"><br>
-        <input type="text" placeholder="Please enter the Publish_Date" name="date"><br>
-        <input type="submit" name="submit" value="create entry">
-        
+<fieldset>
+           <legend class='h2'>Add Item</legend>
+    <form method="POST" enctype="multipart/form-data">
+    <table class='table'>
+        <tr>
+        <th>Title</th>
+        <td><input type="text" placeholder="Please enter the title" name="title"></td>
+        <th>Image</th>
+        <td><input type="text" placeholder="Please enter the image" name="image"></td>
+        <th>ISBNcode</th>
+        <td><input type="text" placeholder="Please enter the ISBNcode" name="number"></td>
+        </tr>
 
+        <tr>
+            <th>Description</th>
+        <td><input type="text" placeholder="Please enter the description" name="description"></td>
+        <th>Type</th>
+        <td><input type="text" placeholder="Please enter the type" name="type"></td>
+        </tr>
+        <tr>
+            <th>Author First Name</th>
+        <td><input type="text" placeholder="Please enter the Author_first_Name" name="fname"></td>
+        <th>Author Last Name</th>
+        <td><input type="text" placeholder="Please enter the Author_last_Name" name="lname"></td>
+        </tr>
+        <tr>
+            <th>Publisher Name</th>
+        <td><input type="text" placeholder="Please enter the Publisher_Name" name="pname"></td>
+        <th>Publisher Address</th>
+       <td> <input type="text" placeholder="Please enter the Publisher_Address" name="padd"></td>
+       <th>Publish_Date</th>
+        <td><input type="text" placeholder="Please enter the Publish_Date" name="date"></td>
+        </tr>
+        <tr>
+        <td><button class="btn btn-success btn-sm" type="submit">Insert Item</button></td>
+        <td><a href="index.php"><button class="btn btn-warning btn-sm" type="button">Home</button></a></td>
+        <!-- <input type="submit" name="submit" value="create entry"> -->
+        </tr>
+    </table>
     </form>
+</fieldset>
 </body>
 </html>
