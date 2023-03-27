@@ -35,7 +35,7 @@
 
 <body>
 <fieldset>
-           <legend class='h2'>Add Item</legend>
+           <legend class='h1'>Add Item</legend>
     <form method="POST" enctype="multipart/form-data">
     <table class='table'>
         <tr>

@@ -9,7 +9,7 @@ $row =mysqli_fetch_assoc($result);
 
 if(isset($_POST["submit"])){
    
-    $title =$_POST["name"];
+    $title =$_POST["title"];
     $image =$_POST["image"];
     $ISBNcode =$_POST["number"];
     $description =$_POST["description"];
@@ -40,20 +40,43 @@ if(isset($_POST["submit"])){
     <title>Document</title>
 </head>
 <body>
-    <form method="POST">
-        <input type="text" placeholder="Please enter the title" name="title"  value="<?= $row["title"]?>">
-        <input type="text" placeholder="Please enter the image" name="image" value="<?= $row["image"]?>">
-        <input type="text" placeholder="Please enter the ISBNcode" name="number" value="<?= $row["number"]?>">
-        <input type="text" placeholder="Please enter the description" name="description" value="<?= $row["description"]?>">
-        <input type="text" placeholder="Please enter the type" name="type" value="<?= $row["type"]?>">
-        <input type="text" placeholder="Please enter the Author_first_Name" name="fname" value="<?= $row["fname"]?>">
-        <input type="text" placeholder="Please enter the Author_last_Name" name="lname" value="<?= $row["lname"]?>">
-        <input type="text" placeholder="Please enter the Publisher_Name" name="pname" value="<?= $row["pname"]?>">
-        <input type="text" placeholder="Please enter the Publisher_Address" name="padd" value="<?= $row["padd"]?>">
-        <input type="text" placeholder="Please enter the Publish_Date" name="date" value="<?= $row["date"]?>">
+<fieldset>
+           <legend class='h1'>Update Item</legend>
+    <form method="POST" enctype="multipart/form-data">
+    <table class='table'>
+        <tr>
+            <th>Title</th>
+        <td><input type="text" placeholder="Please enter the title" name="title"  value="<?= $row["title"]?>"></td>
+        <th>Image</th>
+        <td><input type="text" placeholder="Please enter the image" name="image" value="<?= $row["image"]?>"></td>
+        <th>ISBNcode</th>
+        <td><input type="text" placeholder="Please enter the ISBNcode" name="number" value="<?= $row["number"]?>"></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+        <td><input type="text" placeholder="Please enter the description" name="description" value="<?= $row["description"]?>"></td>
+        <th>Type</th>
+        <td><input type="text" placeholder="Please enter the type" name="type" value="<?= $row["type"]?>"></td>
+        </tr>
+        <tr>
+            <th>Author_first_Name</th>
+        <td><input type="text" placeholder="Please enter the Author_first_Name" name="fname" value="<?= $row["fname"]?>"></td>
+        <th>Author_last_Name</th>
+        <td><input type="text" placeholder="Please enter the Author_last_Name" name="lname" value="<?= $row["lname"]?>"></td>
+        </tr>
+        <tr>
+            <th>Publisher_Name</th>
+        <td><input type="text" placeholder="Please enter the Publisher_Name" name="pname" value="<?= $row["pname"]?>"></td>
+        <th>Publisher_Address</th>
+        <td><input type="text" placeholder="Please enter the Publisher_Address" name="padd" value="<?= $row["padd"]?>"></td>
+        <th>Publish_Date</th>
+        <td><input type="text" placeholder="Please enter the Publish_Date" name="date" value="<?= $row["date"]?>"></td>
+        </tr>
+        <tr>
         <input type="submit" name="submit" value="edit entry">
-        
-
+        </tr>
+    </table>
     </form>
+</fieldset>
 </body>
 </html>
