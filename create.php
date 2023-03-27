@@ -38,7 +38,7 @@
         <input type="text" placeholder="Please enter the title" name="title"><br>
         <input type="text" placeholder="Please enter the image" name="image"><br>
         <input type="text" placeholder="Please enter the ISBNcode" name="number"><br>
-        <input type="text" placeholder="Please enter the description" name="text"><br>
+        <input type="text" placeholder="Please enter the description" name="description"><br>
         <input type="text" placeholder="Please enter the type" name="type"><br>
         <input type="text" placeholder="Please enter the Author_first_Name" name="fname"><br>
         <input type="text" placeholder="Please enter the Author_last_Name" name="lname"><br>
