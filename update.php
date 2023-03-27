@@ -47,7 +47,7 @@ if(isset($_POST["submit"])){
         <tr>
             <th>Title</th>
         <td>
-            <input type="text" placeholder="Please enter the title" name="title"  alt="<?= $row["title"]?>"></td>
+            <input type="text" placeholder="Please enter the title" name="title"  alt="<?= $row["title"]?>" ></td>
         <th>Image</th>
         <td><input type="text" placeholder="Please enter the image" name="image" alt="<?= $row["image"]?>"></td>
         <th>ISBNcode</th>
