@@ -46,31 +46,32 @@ if(isset($_POST["submit"])){
     <table class='table'>
         <tr>
             <th>Title</th>
-        <td><input type="text" placeholder="Please enter the title" name="title"  value="<?= $row["title"]?>"></td>
+        <td>
+            <input type="text" placeholder="Please enter the title" name="title"  alt="<?= $row["title"]?>"></td>
         <th>Image</th>
-        <td><input type="text" placeholder="Please enter the image" name="image" value="<?= $row["image"]?>"></td>
+        <td><input type="text" placeholder="Please enter the image" name="image" alt="<?= $row["image"]?>"></td>
         <th>ISBNcode</th>
-        <td><input type="text" placeholder="Please enter the ISBNcode" name="number" value="<?= $row["number"]?>"></td>
+        <td><input type="text" placeholder="Please enter the ISBNcode" name="number" alt="<?= $row["number"]?>"></td>
         </tr>
         <tr>
             <th>Description</th>
-        <td><input type="text" placeholder="Please enter the description" name="description" value="<?= $row["description"]?>"></td>
+        <td><input type="text" placeholder="Please enter the description" name="description" alt="<?= $row["description"]?>"></td>
         <th>Type</th>
-        <td><input type="text" placeholder="Please enter the type" name="type" value="<?= $row["type"]?>"></td>
+        <td><input type="text" placeholder="Please enter the type" name="type" alt="<?= $row["type"]?>"></td>
         </tr>
         <tr>
             <th>Author_first_Name</th>
-        <td><input type="text" placeholder="Please enter the Author_first_Name" name="fname" value="<?= $row["fname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Author_first_Name" name="fname" alt="<?= $row["fname"]?>"></td>
         <th>Author_last_Name</th>
-        <td><input type="text" placeholder="Please enter the Author_last_Name" name="lname" value="<?= $row["lname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Author_last_Name" name="lname" alt="<?= $row["lname"]?>"></td>
         </tr>
         <tr>
             <th>Publisher_Name</th>
-        <td><input type="text" placeholder="Please enter the Publisher_Name" name="pname" value="<?= $row["pname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publisher_Name" name="pname" alt="<?= $row["pname"]?>"></td>
         <th>Publisher_Address</th>
-        <td><input type="text" placeholder="Please enter the Publisher_Address" name="padd" value="<?= $row["padd"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publisher_Address" name="padd" alt="<?= $row["padd"]?>"></td>
         <th>Publish_Date</th>
-        <td><input type="text" placeholder="Please enter the Publish_Date" name="date" value="<?= $row["date"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publish_Date" name="date" alt="<?= $row["date"]?>"></td>
         </tr>
         <tr>
         <input type="submit" name="submit" value="edit entry">
