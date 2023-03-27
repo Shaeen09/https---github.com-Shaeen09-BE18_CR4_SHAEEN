@@ -37,41 +37,43 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
     <title>Document</title>
 </head>
 <body>
 <fieldset>
            <legend class='h1'>Update Item</legend>
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST" class="form-group" enctype="multipart/form-data">
     <table class='table'>
         <tr>
             <th>Title</th>
         <td>
-            <input type="text" placeholder="Please enter the title" name="title"  alt="<?= $row["title"]?>" ></td>
+            <input type="text" placeholder="Please enter the title" class="form-control" name="title"  value="<?= $row["title"] ?>"></td>
         <th>Image</th>
-        <td><input type="text" placeholder="Please enter the image" name="image" alt="<?= $row["image"]?>"></td>
+        <td><input type="text" placeholder="Please enter the image" class="form-control" name="image" value="<?= $row["image"] ?>"></td>
         <th>ISBNcode</th>
-        <td><input type="text" placeholder="Please enter the ISBNcode" name="number" alt="<?= $row["number"]?>"></td>
+        <td><input type="text" placeholder="Please enter the ISBNcode" class="form-control" name="number" value="<?= $row["number"]?>"></td>
         </tr>
         <tr>
             <th>Description</th>
-        <td><input type="text" placeholder="Please enter the description" name="description" alt="<?= $row["description"]?>"></td>
+        <td><input type="text" placeholder="Please enter the description" class="form-control" name="description" value="<?= $row["description"]?>"></td>
         <th>Type</th>
-        <td><input type="text" placeholder="Please enter the type" name="type" alt="<?= $row["type"]?>"></td>
+        <td><input type="text" placeholder="Please enter the type" class="form-control" name="type" value="<?= $row["type"]?>"></td>
         </tr>
         <tr>
             <th>Author_first_Name</th>
-        <td><input type="text" placeholder="Please enter the Author_first_Name" name="fname" alt="<?= $row["fname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Author_first_Name" class="form-control" name="fname" value="<?= $row["fname"]?>"></td>
         <th>Author_last_Name</th>
-        <td><input type="text" placeholder="Please enter the Author_last_Name" name="lname" alt="<?= $row["lname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Author_last_Name" class="form-control" name="lname" value="<?= $row["lname"]?>"></td>
         </tr>
         <tr>
             <th>Publisher_Name</th>
-        <td><input type="text" placeholder="Please enter the Publisher_Name" name="pname" alt="<?= $row["pname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publisher_Name" class="form-control" name="pname" value="<?= $row["pname"]?>"></td>
         <th>Publisher_Address</th>
-        <td><input type="text" placeholder="Please enter the Publisher_Address" name="padd" alt="<?= $row["padd"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publisher_Address" class="form-control" name="padd" value="<?= $row["padd"]?>"></td>
         <th>Publish_Date</th>
-        <td><input type="text" placeholder="Please enter the Publish_Date" name="date" alt="<?= $row["date"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publish_Date" class="form-control" name="date" value="<?= $row["date"]?>"></td>
         </tr>
         <tr>
         <input type="submit" name="submit" value="edit entry">
@@ -79,5 +81,8 @@ if(isset($_POST["submit"])){
     </table>
     </form>
 </fieldset>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
 </body>
 </html>
