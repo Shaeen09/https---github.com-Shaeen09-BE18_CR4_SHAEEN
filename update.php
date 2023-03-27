@@ -42,6 +42,7 @@ if(isset($_POST["submit"])){
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
 <fieldset>
            <legend class='h1'>Update Item</legend>
     <form method="POST" class="form-group" enctype="multipart/form-data">
@@ -81,6 +82,7 @@ if(isset($_POST["submit"])){
     </table>
     </form>
 </fieldset>
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
