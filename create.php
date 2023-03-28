@@ -1,85 +1,82 @@
 <?php
- require_once "db_connect.php";
-    if(isset($_POST["submit"])){
-   
 
-    $title =$_POST["title"];
-    $image =$_POST["image"];
-    $ISBNcode =$_POST["number"];
-    $description =$_POST["text"];
-    $type =$_POST["type"];
-    $Author_first_Name =$_POST["fname"];
-    $Author_last_Name =$_POST["lname"];
-    $Publisher_Name =$_POST["pname"];
-    $Publisher_Address =$_POST["padd"];
-    $Publish_date =$_POST["date"];
+require "db_connect.php";
 
-    $sql = "INSERT INTO `biglibrary`( `Title`, `image`, `ISBNcode`, `Description`, `Type`, `Author_first_Name`, `Author_last_Name`, `Publisher_Name`, `Publisher_Address`, `Publish_Date`) VALUES ('$title',' $image',' $ISBNcode','$description','$type','$Author_first_Name','$Author_last_Name',' $Publisher_Name','$Publisher_Address','$Publish_date ') ";
+if(isset($_POST["submit"])){
+// $title = $_POST['title'];
+// $image = $_POST['image'];
+// $isbn = $_POST['isbn'];
 
-    if(mysqli_query($connect, $sql)){
-        header("Location:index.php");
-
-    }
-
+// $sql = "INSERT INTO `biglibrary`( `Title`, `image`, `ISBNcode`) VALUES ('$title','$image',$isbn)";
+// $result  = mysqli_query($connect, $sql);
+// var_dump($result);
+$title = $_POST["title"];
+$image = $_POST["image"];
+$ISBNcode = $_POST["isbn"];
+$description = $_POST["description"];
+$type = $_POST["type"];
+$Author_first_Name = $_POST["fname"];
+$Author_last_Name = $_POST["lname"];
+$Publisher_Name = $_POST["pname"];
+$Publisher_Address = $_POST["padd"];
+$Publish_date = $_POST["date"];
+$sql = "INSERT INTO `biglibrary`( `Title`, `image`, `ISBNcode`, `Description`, `Type`, `Author_first_Name`, `Author_last_Name`, `Publisher_Name`, `Publisher_Address`, `Publish_Date`) VALUES ('$title',' $image',' $ISBNcode','$description','$type','$Author_first_Name','$Author_last_Name',' $Publisher_Name','$Publisher_Address','$Publish_date ') ";
+$result = mysqli_query($connect,$sql);
+// var_dump($result);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-
     <title>Document</title>
 </head>
-
 <body>
-    <div class="container">
-<fieldset>
-           <legend class='h1'>Add Item</legend>
-    <form method="POST" action="actions/a_create.php" class="form-group" enctype="multipart/form-data">
-    <table class='table'>
-        <tr>
-        <th>Title</th>
-        <td><input type="text" placeholder="Please enter the title" name="title"></td>
-        <th>Image</th>
-        <td><input type="file"  class="form-control" placeholder="Please enter the image" name="image"></td>
-        <th>ISBNcode</th>
-        <td><input type="text" placeholder="Please enter the ISBNcode" name="number"></td>
-        </tr>
+    <!-- <form action="" method="POST">
 
-        <tr>
-            <th>Description</th>
-        <td><input type="text" placeholder="Please enter the description" name="description"></td>
-        <th>Type</th>
-        <td><input type="text" placeholder="Please enter the type" name="type"></td>
-        </tr>
-        <tr>
-            <th>Author First Name</th>
-        <td><input type="text" placeholder="Please enter the Author_first_Name" name="fname"></td>
-        <th>Author Last Name</th>
-        <td><input type="text" placeholder="Please enter the Author_last_Name" name="lname"></td>
-        </tr>
-        <tr>
-            <th>Publisher Name</th>
-        <td><input type="text" placeholder="Please enter the Publisher_Name" name="pname"></td>
-        <th>Publisher Address</th>
-       <td> <input type="text" placeholder="Please enter the Publisher_Address" name="padd"></td>
-       <th>Publish_Date</th>
-        <td><input type="text" placeholder="Please enter the Publish_Date" name="date"></td>
-        </tr>
-        <tr>
-        <td><button class="btn btn-success btn-sm" type="submit">Insert Item</button></td>
-        <td><a href="index.php"><button class="btn btn-warning btn-sm" type="button">Home</button></a></td>
-        <!-- <input type="submit" name="submit" value="create entry"> -->
-        </tr>
-    </table>
-    </form>
-</fieldset>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <input type="text" name="title">
+    <input type="text" name="image">
+    <input type="number" name="isbn">
+    <input type="submit" value="Create">
+    </form> -->
+    <form method="POST" action="" class="form-group" enctype="multipart/form-data">
+                <table class='table'>
+                    <tr>
+                        <th>Title</th>
+                        <td><input type="text" placeholder="Please enter the title" name="title"></td>
+                        <th>Image</th>
+                        <td><input type="text" placeholder="Please enter the image" name="image"></td>
+                        <th>ISBNcode</th>
+                        <td><input type="text" placeholder="Please enter the ISBNcode" name="isbn"></td>
+                    </tr>
 
+                    <tr>
+                        <th>Description</th>
+                        <td><input type="text" placeholder="Please enter the description" name="description"></td>
+                        <th>Type</th>
+                        <td><input type="text" placeholder="Please enter the type" name="type"></td>
+                    </tr>
+                    <tr>
+                        <th>Author First Name</th>
+                        <td><input type="text" placeholder="Please enter the Author_first_Name" name="fname"></td>
+                        <th>Author Last Name</th>
+                        <td><input type="text" placeholder="Please enter the Author_last_Name" name="lname"></td>
+                    </tr>
+                    <tr>
+                        <th>Publisher Name</th>
+                        <td><input type="text" placeholder="Please enter the Publisher_Name" name="pname"></td>
+                        <th>Publisher Address</th>
+                        <td> <input type="text" placeholder="Please enter the Publisher_Address" name="padd"></td>
+                        <th>Publish_Date</th>
+                        <td><input type="text" placeholder="Please enter the Publish_Date" name="date"></td>
+                    </tr>
+                    <tr>
+                        <td><a href="index.php"><button class="btn btn-warning btn-sm" type="button">Home</button></a></td>
+                    </tr>
+                </table>
+                <button class="btn btn-success btn-sm" type="submit" name ="submit">Insert Item</button>
+            </form>
 </body>
 </html>

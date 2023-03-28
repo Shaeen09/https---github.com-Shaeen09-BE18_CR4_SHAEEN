@@ -45,36 +45,36 @@ if(isset($_POST["submit"])){
     <div class="container">
 <fieldset>
            <legend class='h1'>Update Item</legend>
-    <form method="POST" class="form-group" enctype="multipart/form-data">
+    <form method="POST"  enctype="multipart/form-data">
     <table class='table'>
         <tr>
             <th>Title</th>
         <td>
-            <input type="text" placeholder="Please enter the title" class="form-control" name="title"  value="<?= $row["title"] ?>"></td>
+            <input type="text" placeholder="Please enter the title"  name="title" value="<?= $row["Title"]?>"></td>
         <th>Image</th>
-        <td><input type="text" placeholder="Please enter the image" class="form-control" name="image" value="<?= $row["image"] ?>"></td>
+        <td><input type="text" placeholder="Please enter the image"  name="image" value="<?= $row["image"]?>"></td>
         <th>ISBNcode</th>
-        <td><input type="text" placeholder="Please enter the ISBNcode" class="form-control" name="number" value="<?= $row["number"]?>"></td>
+        <td><input type="text" placeholder="Please enter the ISBNcode"  name="number" value="<?= $row["ISBNcode"]?>" ></td>
         </tr>
         <tr>
             <th>Description</th>
-        <td><input type="text" placeholder="Please enter the description" class="form-control" name="description" value="<?= $row["description"]?>"></td>
+        <td><input type="text" placeholder="Please enter the description"  name="description" value="<?= $row["Description"]?>" ></td>
         <th>Type</th>
-        <td><input type="text" placeholder="Please enter the type" class="form-control" name="type" value="<?= $row["type"]?>"></td>
+        <td><input type="text" placeholder="Please enter the type"  name="type" value="<?= $row["Type"]?>"></td>
         </tr>
         <tr>
             <th>Author_first_Name</th>
-        <td><input type="text" placeholder="Please enter the Author_first_Name" class="form-control" name="fname" value="<?= $row["fname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Author_first_Name"  name="fname" value="<?= $row["Author_first_Name"]?>"></td>
         <th>Author_last_Name</th>
-        <td><input type="text" placeholder="Please enter the Author_last_Name" class="form-control" name="lname" value="<?= $row["lname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Author_last_Name"  name="lname" value="<?= $row["Author_last_Name"]?>"></td>
         </tr>
         <tr>
             <th>Publisher_Name</th>
-        <td><input type="text" placeholder="Please enter the Publisher_Name" class="form-control" name="pname" value="<?= $row["pname"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publisher_Name"  name="pname" value="<?= $row["Publisher_Name"]?>"></td>
         <th>Publisher_Address</th>
-        <td><input type="text" placeholder="Please enter the Publisher_Address" class="form-control" name="padd" value="<?= $row["padd"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publisher_Address"  name="padd" value="<?= $row["Publisher_Address"]?>" ></td>
         <th>Publish_Date</th>
-        <td><input type="text" placeholder="Please enter the Publish_Date" class="form-control" name="date" value="<?= $row["date"]?>"></td>
+        <td><input type="text" placeholder="Please enter the Publish_Date"  name="date" value="<?= $row["Publish_Date"]?>"></td>
         </tr>
         <tr>
         <input type="submit" name="submit" value="edit entry">
