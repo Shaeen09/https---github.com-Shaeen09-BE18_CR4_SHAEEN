@@ -11,7 +11,8 @@
 </head>
 
 <body>
-<h2 id="main_heading">WELCOME to PUBLIC library</h2>
+<h2 id="main_heading">WELCOME TO PUBLIC LIBRARY</h2>
 
     <div class ="container my-5 p-4">
-    <img src="https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581_960_720.jpg" alt="" width="">
+    <img src="https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581_960_720.jpg" alt="" style="width:100%;">
+    
