@@ -1,4 +1,5 @@
 <?php
+include('header.php');
 require_once "db_connect.php";
 
 $id = $_GET["id"];
@@ -89,3 +90,4 @@ if(isset($_POST["submit"])){
 
 </body>
 </html>
+<? include('footer.php'); ?> 

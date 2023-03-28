@@ -1,15 +1,9 @@
 <?php
-
+include('header.php');
 require "db_connect.php";
 
 if(isset($_POST["submit"])){
-// $title = $_POST['title'];
-// $image = $_POST['image'];
-// $isbn = $_POST['isbn'];
 
-// $sql = "INSERT INTO `biglibrary`( `Title`, `image`, `ISBNcode`) VALUES ('$title','$image',$isbn)";
-// $result  = mysqli_query($connect, $sql);
-// var_dump($result);
 $title = $_POST["title"];
 $image = $_POST["image"];
 $ISBNcode = $_POST["isbn"];
@@ -70,11 +64,13 @@ $result = mysqli_query($connect,$sql);
                     </tr>
                     <tr>
                         <td><a href="index.php"><button class="btn btn-warning btn-sm" type="button">Home</button></a></td>
+                        <td><button class="btn btn-success btn-sm" type="submit" name ="submit">Insert Item</button></td>
                     </tr>
                 </table>
-                <button class="btn btn-success btn-sm" type="submit" name ="submit">Insert Item</button>
+                
             </form>
     </fieldset>
             </div>
 </body>
 </html>
+<? include('footer.php'); ?> 
