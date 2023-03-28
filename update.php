@@ -77,6 +77,7 @@ if(isset($_POST["submit"])){
         <td><input type="text" placeholder="Please enter the Publish_Date"  name="date" value="<?= $row["Publish_Date"]?>"></td>
         </tr>
         <tr>
+        <td><a href="index.php"><button class="btn btn-warning btn-sm" type="button">Home</button></a></td>
         <input type="submit" name="submit" value="edit entry">
         </tr>
     </table>

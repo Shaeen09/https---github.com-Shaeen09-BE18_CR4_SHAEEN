@@ -34,13 +34,9 @@ $result = mysqli_query($connect,$sql);
     <title>Document</title>
 </head>
 <body>
-    <!-- <form action="" method="POST">
-
-    <input type="text" name="title">
-    <input type="text" name="image">
-    <input type="number" name="isbn">
-    <input type="submit" value="Create">
-    </form> -->
+    <div class="container">
+    <fieldset>
+           <legend class='h1'>Create Item</legend>
     <form method="POST" action="" class="form-group" enctype="multipart/form-data">
                 <table class='table'>
                     <tr>
@@ -78,5 +74,7 @@ $result = mysqli_query($connect,$sql);
                 </table>
                 <button class="btn btn-success btn-sm" type="submit" name ="submit">Insert Item</button>
             </form>
+    </fieldset>
+            </div>
 </body>
 </html>

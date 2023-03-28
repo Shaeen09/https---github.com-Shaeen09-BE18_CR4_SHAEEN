@@ -44,6 +44,7 @@ if(mysqli_num_rows($result)>0){
 
 <body>
 <h2 id="main_heading">WELCOME to Biglibrary</h2>
+<img src="https: //cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581__340.jpg" alt="">
     <div class ="container my-5 p-4">
         
 <h3>List of Collection</h3>
@@ -62,7 +63,8 @@ if(mysqli_num_rows($result)>0){
     </tr>
   </thead>
   <tbody>
-    <tr><?= $layout; ?>
+    <tr>
+      <?= $layout; ?>
     </tr>
   </tbody>
         </table> 
